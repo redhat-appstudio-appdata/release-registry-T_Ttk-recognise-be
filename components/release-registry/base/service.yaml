@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: release-registry
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: release-registry
+    app.kubernetes.io/part-of: release-registry
+  name: release-registry
+spec:
+  ports:
+  - port: 8078
+    targetPort: 8078
+  selector:
+    app.kubernetes.io/instance: release-registry
+status:
+  loadBalancer: {}
