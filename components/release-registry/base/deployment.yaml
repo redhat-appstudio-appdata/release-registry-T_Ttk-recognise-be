@@ -10,7 +10,6 @@ metadata:
     app.kubernetes.io/part-of: release-registry
   name: release-registry
 spec:
-  replicas: 1
   revisionHistoryLimit: 0
   selector:
     matchLabels:
